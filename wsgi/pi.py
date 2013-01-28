@@ -7,7 +7,7 @@ from decorators import cached
 bp = Blueprint('pi', __name__)
 
 
-@bp.route("/", defaults={'digits': 100000})
+@bp.route("/", defaults={'digits': 50000})
 @bp.route("/<int:digits>/")
 @cached(30)
 def index(digits):
