@@ -2,3 +2,16 @@
 # This is a simple post deploy hook executed after your application 
 # is deployed and started.  This script gets executed directly, so 
 # it could be python, php, ruby, etc.
+MEMCACHED_BINARY=${OPENSHIFT_DATA_DIR}memcached/bin/memcached
+
+if [ ! -e MEMCACHED_BINARY ]; then
+    killall memcached
+    $MEMCACHED_BINARY -l $OPENSHIFT_INTERNAL_IP -p 22322 -m 64 -d
+    echo "${MEMCACHED_BINARY} started!"
+
+else
+  echo "============================================"
+  echo "${MEMCACHED_BINARY} does not exist!."
+  echo "You should manually install it ..."
+  echo "============================================"
+fi

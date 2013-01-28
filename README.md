@@ -12,12 +12,12 @@ Create an account at http://openshift.redhat.com/
 
 Create a python-2.6 application
 
-    rhc app create -a flask -t python-2.6
+    rhc app create -a memcached -t python-2.6
 
-Add this upstream flask repo
+Add this upstream memcached repo
 
-    cd flask
-    git remote add upstream -m master git://github.com/openshift/flask-example.git
+    cd memcached
+    git remote add upstream -m master git://github.com/openshift/memcached-example.git
     git pull -s recursive -X theirs upstream master
     
 Then push the repo upstream
@@ -26,5 +26,5 @@ Then push the repo upstream
 
 That's it, you can now checkout your application at:
 
-    http://flask-$yournamespace.rhcloud.com
+    http://memcached-$yournamespace.rhcloud.com
 
