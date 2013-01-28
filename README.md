@@ -1,8 +1,7 @@
-Flask on OpenShift
+Flask + Memcached on OpenShift
 ==================
 
-This git repository helps you get up and running quickly w/ a Flask installation
-on OpenShift.
+This git repository helps you get up and running quickly w/ a Flask + Memcached installation on OpenShift.
 
 
 Running on OpenShift
@@ -17,7 +16,7 @@ Create a python-2.6 application
 Add this upstream memcached repo
 
     cd memcached
-    git remote add upstream -m master git://github.com/openshift/memcached-example.git
+    git remote add upstream -m master git://github.com/zfdang/memcached-in-openshift.git
     git pull -s recursive -X theirs upstream master
     
 Then push the repo upstream
