@@ -26,7 +26,7 @@ if [ ! -d ${OPENSHIFT_DATA_DIR}memcached ]; then
 
   echo "Start compiling memcached ${MEMCACHED_VERSION} on Openshift (i'll take a whi1.4.15"
   cd memcached-${MEMCACHED_VERSION}
-  sh configure --prefix=${OPENSHIFT_DATA_DIR}memcached --disable-shared --enable-static
+  sh configure --prefix=${OPENSHIFT_DATA_DIR}memcached
   make
   make install 
 

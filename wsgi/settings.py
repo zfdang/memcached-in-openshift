@@ -7,7 +7,7 @@ class Config(object):
     # memcached server URL
     MEMCACHED_SERVERS = []
     if 'OPENSHIFT_APP_UUID' in os.environ:
-        MEMCACHED_SERVERS.append('%s:22322' % (os.environ['OPENSHIFT_INTERNAL_I']))
+        MEMCACHED_SERVERS.append('%s:22322' % (os.environ['OPENSHIFT_INTERNAL_IP']))
     else:
         MEMCACHED_SERVERS.append('192.168.0.204:22322')
 
