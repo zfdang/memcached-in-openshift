@@ -24,7 +24,7 @@ if [ ! -d ${OPENSHIFT_DATA_DIR}memcached ]; then
     tar -xvzf memcached-${MEMCACHED_VERSION}.tar.gz
   fi
 
-  echo "Start compiling memcached ${MEMCACHED_VERSION} on Openshift (i'll take a whi1.4.15"
+  echo "Start compiling memcached ${MEMCACHED_VERSION} on Openshift (i'll take a while)"
   cd memcached-${MEMCACHED_VERSION}
   sh configure --prefix=${OPENSHIFT_DATA_DIR}memcached
   make
